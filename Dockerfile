@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 python:alpine
+FROM python:alpine
 
 # Working directory
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy application code
 COPY . .
