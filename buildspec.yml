@@ -8,7 +8,7 @@ phases:
     build:
         commands:
             - echo Building Docker image...
-            - docker buildx build --platform linux/arm64 -t microservice:latest .
+            - docker build -t microservice:latest .
             - docker tag microservice:latest 097128706039.dkr.ecr.ap-southeast-1.amazonaws.com
     post_build:
         commands:
