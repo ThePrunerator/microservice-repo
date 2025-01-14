@@ -8,12 +8,12 @@ phases:
     build:
         commands:
             - echo Building Docker image...
-            - docker build -t microservice:latest .
-            - docker tag microservice:latest 097128706039.dkr.ecr.ap-southeast-1.amazonaws.com
+            - docker build -t accad5/in-class:latest .
+            - docker tag accad5/in-class:latest 097128706039.dkr.ecr.ap-southeast-1.amazonaws.com
     post_build:
         commands:
             - echo Pushing Docker image to ECR...
-            - docker push 097128706039.dkr.ecr.ap-southeast-1.amazonaws.com
+            - docker push 097128706039.dkr.ecr.ap-southeast-1.amazonaws.com/accad5/in-class:latest
 
 artifacts:
     files:
